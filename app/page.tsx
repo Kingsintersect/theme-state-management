@@ -1,113 +1,158 @@
-import Image from "next/image";
+import Card from "@/components/Card";
+import Hero from "@/components/Hero";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    return (
+        <main className="relative w-[80vw] mx-auto sm:px-10 px-5 overflow-clip my-10">
+            <section className="max-w-7xl w-full flex justify-center items-center flex-col">
+                <Hero />
+            </section>
+            <section className="py-10 grid gap-y-5">
+                <h1 className="text-center text-xl text-primary">Heading...</h1>
+                <div className="grid md:grid-cols-3 gap-10">
+                    <div className="relative overflow-hidden w-full h-[400px] rounded-2xl p-5 shadow-lg border border-neutral-300">
+                        <div className="sticky top-0 z-10">
+                            <div className="text-lg">King Solo</div>
+                        </div>
+                        <div className="absolute -top-4 -left-16 -translate-y-1/2 rounded-full w-96 h-96 blur-3xl mix-blend opacity bg-primary-500" style={{ "top": "24rem", left: "-14rem", }}></div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+                        <div className="absolute -top-48 left-1/2 -translate-x-1/2 rounded-full w-96 h-96 blur-3xl mix-blend bg-primary-500" ></div>
+                        <div className="absolute top-1/3 left-6">
+                            <div className="text-6xl">1,232</div>
+                            <div className="text-lg">New customers in past 30 days</div>
+                        </div>
+                    </div>
+                    <div className="w-full h-[400px] rounded-2xl p-5 shadow-lg border border-neutral-300">
+                        <div className="text-lg">Revenue</div>
+                        <div className="text-3xl mb-7">$12,543</div>
+                        <div className="border-b border-color h-4/6" style={{ display: "grid", gridTemplateColumns: "repeat(17, 1fr)", gridTemplateRows: "repeat(10, 1fr)", gap: "0px 6px" }}>
+                            <div className="rounded-t-sm bg-primary-500" style={{ gridArea: "11 / 1 / 3 / 1" }}></div>
+                            <div className="rounded-t-sm bg-primary-300" style={{ gridArea: "11 / 2 / 1 / 2" }}></div>
+                            <div className="rounded-t-sm bg-primary-500" style={{ gridArea: "11 / 4 / 5 / 4" }}></div>
+                            <div className="rounded-t-sm bg-primary-300" style={{ gridArea: "11 / 5 / 3 / 5" }}></div>
+                            <div className="rounded-t-sm bg-primary-500" style={{ gridArea: "11 / 7 / 6 / 7" }}></div>
+                            <div className="rounded-t-sm bg-primary-300" style={{ gridArea: "11 / 8 / 7 / 8" }}></div>
+                            <div className="rounded-t-sm bg-primary-500" style={{ gridArea: "11 / 10 / 1 / 10" }}></div>
+                            <div className="rounded-t-sm bg-primary-300" style={{ gridArea: "11 / 11 / 3 / 11" }}></div>
+                            <div className="rounded-t-sm bg-primary-500" style={{ gridArea: "11 / 13 / 5 / 13" }}></div>
+                            <div className="rounded-t-sm bg-primary-300" style={{ gridArea: "11 / 14 / 2 / 14" }}>
+                            </div>
+                            <div className="rounded-t-sm bg-primary-500" style={{ gridArea: "11 / 16 / 6 / 16" }}></div>
+                            <div className="rounded-t-sm bg-primary-300" style={{ gridArea: "11 / 17 / 7 / 17" }}></div>
+                        </div>
+                        <div className="" style={{ display: "grid", gridTemplateColumns: "repeat(17, 1fr)", gridColumnGap: "6px" }}><div className="col-span-2 text-center text-xs opacity-50 pt-3">Jan</div><div></div><div className="col-span-2 text-center text-xs opacity-50 pt-3">Feb</div><div></div><div className="col-span-2 text-center text-xs opacity-50 pt-3">Mar</div><div></div><div className="col-span-2 text-center text-xs opacity-50 pt-3">Apr</div><div></div><div className="col-span-2 text-center text-xs opacity-50 pt-3">May</div><div></div><div className="col-span-2 text-center text-xs opacity-50 pt-3">Jun</div></div>
+                    </div>
+                    <div className="w-full h-[400px] rounded-2xl p-5 shadow-lg border border-neutral-300">
+                        <div className="text-lg sticky top-0">Today</div>
+                        <div className="overflow-y-scroll mt-4 relative -bottom-11">
+                            <div className="space-y-2">
+                                <div className="rounded-lg relative overflow-hidden bg-primary-950 p-3 pb-4 pl-4">
+                                    <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-primary-500"></div>
+                                    <div className="flex justify-between items-center text-primary-100">Design system meeting</div>
+                                    <div className="text-primary-100 text-sm">9 - 10 AM</div>
+                                    <div className="flex items-start justify-start -space-x-1 mt-3">
+                                        <img src="/img/api.png" className="border-2 border-border w-6 h-6 rounded-full" alt="image" />
+                                        <img src="/img/devices.png" className="border-2 border-border w-6 h-6 rounded-full" alt="image" />
+                                        <img src="/img/graphql2.png" className="border-2 border-border w-6 h-6 rounded-full" alt="image" />
+                                        <img src="/img/react-dark.png" className="border-2 border-border w-6 h-6 rounded-full" alt="image" />
+                                        <img src="/img/react-light.png" className="border-2 border-border w-6 h-6 rounded-full" alt="image" />
+                                    </div>
+                                </div>
+                                <div className="rounded-lg relative overflow-hidden bg-primary-950 p-3 pb-4 pl-4">
+                                    <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-primary-500"></div>
+                                    <div className="flex justify-between items-center text-primary-100">Design system meeting</div>
+                                    <div className="text-primary-100 text-sm">9 - 10 AM</div>
+                                </div>
+                                <div className="rounded-lg relative overflow-hidden bg-primary-950 p-3 pb-4 pl-4">
+                                    <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-primary-500"></div>
+                                    <div className="flex justify-between items-center text-primary-100">Design system meeting</div>
+                                    <div className="text-primary-100 text-sm">9 - 10 AM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+                    <div className="relative overflow-clip w-full h-[400px] bg-cover rounded-2xl p-5 shadow-lg border border-neutral-300" style={{ backgroundImage: "url('/people/p1.jpg')" }}>
+                        <div className="absolute inset-0" style={{ backgroundImage: "linear-gradient(transparent 0%, rgb(169, 0, 163) 100%)" }}>
+                            <div className="h-full flex">
+                                <div className="leading-none p-6 rounded-2xl mt-auto mb-2 text-4xl font-semibold drop-shadow-sm tracking-tight text-white">
+                                    Create <br />
+                                    <span className="text-primary-300">color scales</span> <br />in seconds. </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="relative w-full h-[400px] rounded-2xl shadow-lg border border-neutral-300 bg-primary-200 overflow-clip">
+                        <div className="p-[178px] bg-cover absolute rounded-full" style={{ backgroundImage: "url('/people/p2.jpg')", backgroundPosition: "0px -45%", top: "-125px", right: "-63px" }}></div>
+                        <div className="absolute rounded-full border-[25px] border-primary-200 p-[136px]" style={{ top: "-115px", right: "-58px" }}></div>
+                        <div className="absolute rounded-full border-[25px] border-primary-200 p-[90px]" style={{ top: "-80px", right: "-18px" }}></div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+                        <div className="h-full flex">
+                            <div className="leading-none p-6 rounded-2xl mt-auto mb-2 text-4xl font-semibold drop-shadow-sm tracking-tight text-primary-500">
+                                Create <br />
+                                <span className="text-primary-950">color scales</span> <br />in seconds. </div>
+                        </div>
+                    </div>
+                    <div className="w-full h-[400px] bg-cover rounded-2xl shadow-lg" style={{ backgroundImage: "url('/people/p3.jpg')" }}>
+                        <div className="h-full flex p-2">
+                            <div className="leading-none p-4 rounded-2xl mt-auto mb-2 text-4xl font-semibold tracking-tight text-white border border-primary-500 w-full bg-opacity-80 backdrop-filter backdrop-blur-sm bg-primary-800 opacity-90">
+                                <div className="">
+                                    Create<br />
+                                    color scales<br />
+                                    in seconds.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className=" my-20">
+                <div className="grid md:grid-cols-3 gap-5">
+                    <div className="flex items-center justify-center gap-3">
+                        <button className="px-5 py-1 shadow-md bg-success text-success-accent">button</button>
+                        <button className="px-5 py-1 shadow-md text-success bg-success-accent">button</button>
+                    </div>
+                    <div className="flex items-center justify-center gap-3">
+                        <button className="px-5 py-1 shadow-md bg-warning text-warning-accent">button</button>
+                        <button className="px-5 py-1 shadow-md text-warning bg-warning-accent">button</button>
+                    </div>
+                    <div className="flex items-center justify-center gap-3">
+                        <button className="px-5 py-1 shadow-md bg-info text-info-accent">button</button>
+                        <button className="px-5 py-1 shadow-md text-info bg-info-accent">button</button>
+                    </div>
+                    <div className="flex items-center justify-center gap-3">
+                        <button className="px-5 py-1 shadow-md bg-important text-important-accent">button</button>
+                        <button className="px-5 py-1 shadow-md text-important bg-important-accent">button</button>
+                    </div>
+                    <div className="flex items-center justify-center gap-3">
+                        <button className="px-5 py-1 shadow-md bg-danger text-danger-accent">button</button>
+                        <button className="px-5 py-1 shadow-md text-danger bg-danger-accent">button</button>
+                    </div>
+                    <div className="flex items-center justify-center gap-3">
+                        <button className="px-5 py-1 shadow-md bg-neutral text-neutral-accent">button</button>
+                        <button className="px-5 py-1 shadow-md text-neutral bg-neutral-accent">button</button>
+                    </div>
+                </div>
+                <div className="flex items-center justify-center my-5">
+                    <div className="flex items-center justify-center gap-3">
+                        <button className="px-5 py-1 shadow-md bg-primary-light text-primary-dark">button</button>
+                        <button className="px-5 py-1 shadow-md text-primary-light bg-primary-dark">button</button>
+                    </div>
+                </div>
+            </section>
+            <section className="flex items-center justify-center gap-5">
+                <Card className={'text-info-accent bg-info'} iClass='bg-info-accent'>solomon</Card>
+                <Card className={'text-warning-accent bg-warning'} iClass='bg-warning-accent'>solomon</Card>
+                <Card className={'text-danger-accent bg-danger'} iClass='bg-danger-accent'>solomon</Card>
+                <Card className={'text-neutral-accent bg-neutral'} iClass='bg-neutral-accent'>solomon</Card>
+                <Card className={'text-success-accent bg-success'} iClass='bg-success-accent'>solomon</Card>
+            </section>
+            <section className="flex items-center justify-center gap-5 mt-10 py-10">
+                <div className="spread-bar relative overflow-hidden w-[200px] h-[200px] border-2 border-success-accent rounded-2xl shadow-2xl">
+                    <p className="text-center text-fade">animation fade</p>
+                </div>
+                <div className="w-[200px] h-[200px] border-2 border-warning-accent rounded-2xl shadow-2xl"></div>
+                <div className="w-[200px] h-[200px] border-2 border-info-accent rounded-2xl shadow-2xl"></div>
+            </section>
+        </main>
+    );
 }

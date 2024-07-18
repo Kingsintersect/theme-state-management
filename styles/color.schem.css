@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --base-color: 300, 100%, 50%;
+        --base-color-light: 300, 30%, 94%;
+        --base-color-dark: 300, 90%, 20%;
+
+        --bg-neutral: 0, 4%, 89%;
+        --fg-neutral: 0, 0%, 18%;
+
+        --white: 0, 100%, 100%;
+        --black: 0, 100%, 0%;
+
+        --neutral: 208, 7%, 93%;
+        --neutral-accent: 208, 7%, 46%;
+
+        --success: 143, 38%, 89%;
+        --success-accent: 158, 95%, 34%;
+
+        --important: 211, 38%, 85%;
+        --important-accent: 211, 100%, 50%;
+
+        --warning: 45, 100%, 89%;
+        --warning-accent: 45, 100%, 51%;
+
+
+        /* --info: 240, 100%, 85%; */
+        --info: 188, 78%, 89%;
+        --info-accent: 188, 78%, 41%;
+
+        --danger: 0 84.2% 89%;
+        --danger-accent: 0 84.2% 41%;
+
+    }
+
+    .light {
+        --background: hsl(var(--base-color-light));
+        --color: hsl(var(--base-color-dark));
+    }
+
+    .dark {
+        --background: hsl(var(--base-color-dark));
+        --color: hsl(var(--base-color-light));
+    }
+
+}
+
+* {
+    transition: all 0.4s ease-in-out;
+}
+
+[data-theme="light"] {
+    --background: hsl(var(--base-color-light));
+    --color: hsl(var(--base-color-dark));
+}
+
+[data-theme="dark"] {
+    --background: hsl(var(--base-color-dark));
+    --color: hsl(var(--base-color-light));
+}
+
+.primary {
+    background-color: var(--background);
+    color: var(--color);
+}

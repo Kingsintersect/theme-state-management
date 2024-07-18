@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	/* color: hsl(304, 100%, 56%) */
+}
+
+@layer base {
+	:root {
+		/* color id: change this and you change the entire color  */
+		--primary-color-id: 300;
+		/* number must stay between 0 to 360*/
+		--secondary-color-id: 0;
+		/* number must stay between 0 to 360*/
+		--neutral-color-id: 303;
+		/* number must stay between 0 to 360*/
+		--green-color-id: 123;
+		/* number must stay between 0 to 360*/
+		--bluepink-color-id: 195;
+		/* number must stay between 0 to 360*/
+
+		/* base colors */
+		--primary-light-mode: var(--primary-color-id), 100%, 56%;
+		--primary-dark-mode: var(--primary-color-id), 100%, 18%;
+
+		--secondary-light-mode: var(--secondary-color-id), 95%, 5%;
+		--secondary-dark-mode: var(--secondary-color-id), 0%, 95%;
+
+		--neutral-light-mode: var(--neutral-color-id), 0%, 93%;
+		--neutral-dark-mode: var(--neutral-color-id), 80%, 8%;
+
+		/* other colors */
+		--base-color: var(--primary-color-id), 100%, 56%;
+		--base-color-light: var(--primary-color-id), 30%, 94%;
+		--base-color-dark: var(--primary-color-id), 90%, 20%;
+
+		--white: 0, 100%, 100%;
+		--black: 0, 100%, 0%;
+
+		--gray: 208, 7%, 93%;
+		--gray-accent: 208, 7%, 46%;
+
+		--success: 143, 38%, 89%;
+		--success-accent: 158, 95%, 34%;
+
+		--important: 211, 38%, 85%;
+		--important-accent: 211, 100%, 50%;
+
+		--warning: 45, 100%, 89%;
+		--warning-accent: 45, 100%, 51%;
+
+		--info: 188, 78%, 89%;
+		--info-accent: 188, 78%, 41%;
+
+		--danger: 0 84.2% 89%;
+		--danger-accent: 0 84.2% 41%;
+
+		--border-color: 303, 80%, 8%
+	}
+
+	/* .light {
+		--background: hsl(var(--base-color-light));
+		--color: hsl(var(--base-color-dark));
+	}
+
+	.dark {
+		--background: hsl(var(--base-color-dark));
+		--color: hsl(var(--base-color-light));
+	} */
+
+}
+
+* {
+	transition: all 0.4s ease-in-out;
+	background-color: transparent;
+}
+
+[data-mode="green"] {
+	/* primary variants */
+	--primary-50: var(--green-color-id), 100%, 97%;
+	--primary-100: var(--green-color-id), 100%, 95%;
+	--primary-200: var(--green-color-id), 100%, 89%;
+	--primary-300: var(--green-color-id), 100%, 80%;
+	--primary-500: var(--green-color-id), 100%, 56%;
+	--primary-800: var(--green-color-id), 100%, 33%;
+	--primary-950: var(--green-color-id), 100%, 18%;
+}
+
+[data-mode="bluepink"] {
+	/* primary variants */
+	--primary-50: var(--bluepink-color-id), 100%, 97%;
+	--primary-100: var(--bluepink-color-id), 100%, 95%;
+	--primary-200: var(--bluepink-color-id), 100%, 89%;
+	--primary-300: var(--bluepink-color-id), 100%, 80%;
+	--primary-500: var(--bluepink-color-id), 100%, 56%;
+	--primary-800: var(--bluepink-color-id), 100%, 33%;
+	--primary-950: var(--bluepink-color-id), 100%, 18%;
+
+}
+
+[data-mode="primary"] {
+	/* primary variants */
+	--primary-50: var(--primary-color-id), 100%, 97%;
+	--primary-100: var(--primary-color-id), 100%, 95%;
+	--primary-200: var(--primary-color-id), 100%, 89%;
+	--primary-300: var(--primary-color-id), 100%, 80%;
+	--primary-500: var(--primary-color-id), 100%, 56%;
+	--primary-800: var(--primary-color-id), 100%, 33%;
+	--primary-950: var(--primary-color-id), 100%, 18%;
+}
+
+[data-theme="light"] {
+	/* main ones */
+	--background: hsl(var(--neutral-light-mode));
+	--forground: hsl(var(--primary-light-mode));
+	--color: hsl(var(--secondary-light-mode));
+}
+
+[data-theme="dark"] {
+	--background: hsl(var(--neutral-dark-mode));
+	--forground: hsl(var(--primary-dark-mode));
+	--color: hsl(var(--secondary-dark-mode));
+}
+
+body {
+	background-color: var(--background);
+	color: var(--color);
+}
+
+.card {
+	background-color: var(--forground);
+	color: var(--color);
+}
+
+.spread-bar::after {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	width: 0px;
+	height: 5px;
+	display: block;
+	border-radius: 20%;
+	background-color: hsl(var(--primary-800));
+	transition: 0.5s ease left, 0.5s ease width;
+}
+
+.spread-bar:hover::after {
+	left: 0px;
+	width: 100%;
+}
+
+text-fade {
+	display: inline-flex;
+	background: linear-gradient(90deg, #5772E8 0%, #991FE8 52%, #D6A4F6 100%);
+	background-size: auto auto;
+	background-clip: border-box;
+	background-size: 200% auto;
+	color: #fff;
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: fade-in-out 3s ease-in-out infinite alternate;
+}
+
+
+@-webkit-keyframes example {
+	100% {
+		background-position: 200% center;
+	}
+}
